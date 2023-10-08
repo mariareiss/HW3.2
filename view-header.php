@@ -26,7 +26,7 @@
           <a class="nav-link" href="products.php">Products</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="customers-with-products.php">Customers with products</a>
+          <a class="nav-link" href="customers-purchases.php">Customers Purchases</a>
         </li>
       </ul>
     </div>
