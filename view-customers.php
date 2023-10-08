@@ -14,10 +14,10 @@
 while ($customer = $customers->fetch_assoc()){
 ?>
   <tr>
-   <td><?php echo $customers['customer_id'];?></td> 
-   <td><?php echo $customers['customer_name'];?></td>
-   <td><?php echo $customers['customer_city'];?></td>
-   <td><?php echo $customers['customer_phone'];?></td>    
+   <td><?php echo $customer['customer_id'];?></td> 
+   <td><?php echo $customer['customer_name'];?></td>
+   <td><?php echo $customer['customer_city'];?></td>
+   <td><?php echo $customer['customer_phone'];?></td>    
   </tr>
 <?php
 }  
