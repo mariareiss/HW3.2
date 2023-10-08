@@ -2,8 +2,7 @@
 function selectCustomers() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT customer_id, customer_name, customer_city, customer_phone FROM `customer`");
-        $stmt->bind_param("s", $uEmail);
+        $stmt = $conn->prepare("SELECT customer_id, customer_name, customer_city, customer_phone FROM `customer`");        
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
