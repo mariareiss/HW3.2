@@ -18,10 +18,10 @@ while ($product = $products->fetch_assoc()){
    <td><?php echo $product['product_name'];?></td> 
    <td><?php echo $product['product_price'];?></td>   
     <td>
-      <form method=post" action="orders-by-products.php">
+      <form method=post"action="orders-by-products.php">
         <input type="hidden" name="pid" value="<?php echo $order['product_id'];?>">
-        <td><a href="order-by-customer.php?id=<?php echo $order['product_id'];?>">Order</a></td>
-  <button type="submit" class="btn btn-primary">Orders</button>
+        
+  <button type="submit" class="btn btn-primary">Order</button>
 </form>
     </td>
   </tr>
