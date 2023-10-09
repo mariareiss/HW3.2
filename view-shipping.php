@@ -11,12 +11,12 @@
     </thead>
     <tbody>
 <?php
-while ($shipping =$Shipping->fetch_assoc()){
+while ($shippings =$shipping->fetch_assoc()){
 ?>
   <tr>
-   <td><?php echo $shipping['shipping_id'];?></td> 
-   <td><?php echo $shipping['shipping_product'];?></td>
-   <td><?php echo $shipping['shipping_date'];?></td>   
+   <td><?php echo $shippings['shipping_id'];?></td> 
+   <td><?php echo $shippings['shipping_product'];?></td>
+   <td><?php echo $shippings['shipping_date'];?></td>   
   </tr>
 <?php
 }  
