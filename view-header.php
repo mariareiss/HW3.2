@@ -27,6 +27,8 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="customers-purchases.php">Customers Purchases</a>
+          <li class="nav-item">
+          <a class="nav-link" href="shipping.php">Shipping</a>
         </li>
       </ul>
     </div>
