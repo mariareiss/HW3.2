@@ -13,7 +13,7 @@
     </thead>
     <tbody>
 <?php
-while ($orders = $orders->fetch_assoc()){
+while ($order = $orders->fetch_assoc()){
 ?>
   <tr>
    <td><?php echo $order['product_id'];?></td> 
