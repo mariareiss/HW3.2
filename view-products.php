@@ -21,7 +21,7 @@ while ($product = $products->fetch_assoc()){
       <form method=post"action="orders-by-products.php">
         <input type="hidden" name="pid" value="<?php echo $order['product_id'];?>">
         
-  <button type="submit" class="btn btn-primary">Order</button>
+  <button type="submit" class="btn btn-primary">Orders</button>
 </form>
     </td>
   </tr>
