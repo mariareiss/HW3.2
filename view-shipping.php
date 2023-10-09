@@ -11,14 +11,14 @@
     </thead>
     <tbody>
 <?php
-while ($shipping = $shipping->fetch_assoc()){
+while ($shipping = $Shippings->fetch_assoc()){
 ?>
   <tr>
    <td><?php echo $shipping['shipping_id'];?></td> 
    <td><?php echo $shipping['shipping_product'];?></td>
    <td><?php echo $shipping['shipping_date'];?></td>
    
-   <td><a href="products-by-customers.php?id=<?php echo $customer['customer_id'];?>">Products</a></td>
+   
   </tr>
 <?php
 }  
