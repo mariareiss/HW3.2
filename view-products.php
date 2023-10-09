@@ -18,8 +18,8 @@ while ($product = $products->fetch_assoc()){
    <td><?php echo $product['product_name'];?></td> 
    <td><?php echo $product['product_price'];?></td>   
     <td>
-      <form method=post"action="order-by-products.php">
-        <input type="hidden" name="pid" value="<?php echo $order['product_id'];?>">
+      <form method="post" action="order-by-products.php">
+        <input type="hidden" name="pid" value="<?php echo $product['product_id'];?>">
         
   <button type="submit" class="btn btn-primary">Orders</button>
 </form>
