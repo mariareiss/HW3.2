@@ -11,7 +11,7 @@
     </thead>
     <tbody>
 <?php
-while ($shipping = $Shippings->fetch_assoc()){
+while ($shipping =$shipping->fetch_assoc()){
 ?>
   <tr>
    <td><?php echo $shipping['shipping_id'];?></td> 
