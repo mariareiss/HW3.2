@@ -32,7 +32,7 @@ while ($customer = $customers->fetch_assoc()){
    <td><?php echo $customer['customer_city'];?></td>
    <td><?php echo $customer['customer_phone'];?></td>
    <td><a href="products-by-customers.php?id=<?php echo $customer['customer_id'];?>">Products</a></td>
-  </tr>      
+  </td>      
 <?php
   include "view-customer-editform.php";
 ?>     
