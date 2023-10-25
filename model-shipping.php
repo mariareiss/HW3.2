@@ -25,11 +25,11 @@ function insertShipping($sDate, $sProduct) {
         throw $e;
     }
 }
-function updateShipping($sDate, $sProduct, $sid) {
+function updateShipping($sDate, $sProduct, $mid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `shipping` set `shipping_date`= ?, `shipping_product`= ? where shipping_id = ?");
-        $stmt->bind_param("ssi", $sDate, $sProduct, $sid);
+        $stmt->bind_param("ssi", $sDate, $sProduct, $mid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -42,7 +42,7 @@ function deleteShipping($sid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("delete from `shipping` where shipping_id=?");
-        $stmt->bind_param("i", $sid);
+        $stmt->bind_param("i", $mid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
