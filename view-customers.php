@@ -57,3 +57,4 @@ while ($customer = $customers->fetch_assoc())
     </tbody>
   </table>
 </div>
+}
