@@ -24,6 +24,7 @@
     <label for="pPrice" class="form-label">Product Price</label>
     <input type="text" class="form-control" id="pPrice" name="pPrice">
   </div>
+           <input type="hidden" name="actionType" value="Add">
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
       </div>
