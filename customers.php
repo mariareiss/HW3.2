@@ -14,14 +14,14 @@ if (isset($_POST['actionType'])) {
     }
     break;
     case "Edit":
-    if (updateCustomers($_POST['cName'], $_POST['cCity'], $_POST['cPhone'], $_POST['cid'])){
+    if (updateCustomer($_POST['cName'], $_POST['cCity'], $_POST['cPhone'], $_POST['cid'])){
       echo '<div class="alert alert-success" role="alert">Customer edited.</div>';
     } else {
       echo '<div class="alert alert-error" role="alert">Error</div>';      
     }
     break;
     case "Delete":
-    if (deleteCustomers($_POST['cid'])){
+    if (deleteCustomer($_POST['cid'])){
       echo '<div class="alert alert-success" role="alert">Customer deleted.</div>';
     } else {
       echo '<div class="alert alert-error" role="alert">Error</div>';      
@@ -29,7 +29,7 @@ if (isset($_POST['actionType'])) {
     break;
   }
 }
-$customers = selectCustomers();
+$customers = selectCustomer();
 include "view-customers.php";
 include "view-footer.php";
 ?>
