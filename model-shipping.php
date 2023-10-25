@@ -38,7 +38,7 @@ function updateShipping($sDate, $sProduct, $mid) {
         throw $e;
     }
 }
-function deleteShipping($sid) {
+function deleteShipping($mid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("delete from `shipping` where shipping_id=?");
