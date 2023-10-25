@@ -45,6 +45,8 @@ while ($customer = $customers->fetch_assoc()){
         </button>
 
       </form> 
+   </td>
+    <td>
 <?php
   include "view-customer-editform.php";
 ?>
