@@ -9,9 +9,9 @@ if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']){
     case "Add":
     if (insertProduct($_POST['pName'], $_POST['pPrice'])){
-      echo '<div class="alert alert-success" role="alert">Product added.</div>"';
+      echo '<div class="alert alert-success" role="alert">Product added.</div>';
     } else {
-      echo '<div class="alert alert-error" role="alert">Error</div>"';      
+      echo '<div class="alert alert-error" role="alert">Error</div>';      
     }
     break;
   }
