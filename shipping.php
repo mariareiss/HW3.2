@@ -15,14 +15,14 @@ if (isset($_POST['actionType'])) {
     }
     break;
     case "Edit":
-    if (updateShipping($_POST['sDate'], $_POST['sProduct'], $_POST['sid'])){
+    if (updateShipping($_POST['sDate'], $_POST['sProduct'], $_POST['mid'])){
       echo '<div class="alert alert-success" role="alert">Shipping edited.</div>';
     } else {
       echo '<div class="alert alert-error" role="alert">Error</div>';      
     }
     break;
     case "Delete":
-    if (deleteShipping($_POST['sid'])){
+    if (deleteShipping($_POST['mid'])){
       echo '<div class="alert alert-success" role="alert">Shipping deleted.</div>';
     } else {
       echo '<div class="alert alert-error" role="alert">Error</div>';      
