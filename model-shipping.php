@@ -15,7 +15,7 @@ function selectShipping() {
 function insertShipping($sDate, $sProduct) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `shipping` (`shipping_date`, `shipping_product`) VALUES (?, ?)");
+        $stmt = $conn->prepare("INSERT INTO `Shipping` (`shipping_date`, `shipping_product`, `order_id`) VALUES (?, ?,?)");
         $stmt->bind_param("ss", $sDate, $sProduct);
         $success = $stmt->execute();
         $conn->close();
