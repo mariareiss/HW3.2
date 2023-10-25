@@ -19,12 +19,12 @@ include "view-customer-newform.php";
       <th></th>
       <th></th>
       <th></th>
-      <th></th>
       </tr>
     </thead>
     <tbody>
 <?php
-while ($customer = $customers->fetch_assoc()){
+while ($customer = $customers->fetch_assoc())
+{
 ?>
   <tr>
    <td><?php echo $customer['customer_id'];?></td> 
