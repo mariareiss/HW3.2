@@ -33,7 +33,7 @@ while ($customer = $customers->fetch_assoc()){
    <td><a href="products-by-customers.php?id=<?php echo $customer['customer_id'];?>">Products</a></td>
   </tr>      
 <?php
-  include "view-customers-editform.php";
+  include "view-customer-editform.php";
 ?>     
    </td>
    <td>
