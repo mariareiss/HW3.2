@@ -12,4 +12,43 @@ function selectShipping() {
         throw $e;
     }
 }
+function insertShipping($sDate, $sProduct) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("INSERT INTO `shipping` (`shipping_date`, `shipping_product`) VALUES (?, ?)");
+        $stmt->bind_param("ss", $sDate, $sProduct);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+function updateShipping($sDate, $sProduct, $sid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("update `shipping` set `shipping_date`= ?, `shipping_product`= ? where shipping_id = ?");
+        $stmt->bind_param("ssi", $sDate, $sProduct, $sid);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+function deleteShipping($sid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("delete from `shipping` where shipping_id=?");
+        $stmt->bind_param("i", $sid);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
 ?>
