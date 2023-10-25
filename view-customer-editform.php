@@ -18,15 +18,15 @@
         <form method="post" action="">
   <div class="mb-3">
     <label for="cName<?php echo $customer['customer_id'];?>" class="form-label">Customer Name</label>
-    <input type="text" class="form-control" id="cName<?php echo $customer['customer_id'];?>" name="cName" value="<?php echo $customer['customer_id'];?>">
+    <input type="text" class="form-control" id="cName<?php echo $customer['customer_id'];?>" name="cName" value="<?php echo $customer['customer_name'];?>">
   </div>
   <div class="mb-3">
     <label for="cCity<?php echo $customer['customer_id'];?>" class="form-label">Customer City</label>
-    <input type="text" class="form-control" id="cCity<?php echo $customer['customer_id'];?>" name="cCity" value="<?php echo $customer['customer_id'];?>">
+    <input type="text" class="form-control" id="cCity<?php echo $customer['customer_id'];?>" name="cCity" value="<?php echo $customer['customer_city'];?>">
   </div>
   <div class="mb-3">
     <label for="cPhone<?php echo $customer['customer_id'];?>" class="form-label">Customer Phone</label>
-    <input type="text" class="form-control" id="cPhone<?php echo $customer['customer_id'];?>" name="cPhone" value="<?php echo $customer['customer_id'];?>">
+    <input type="text" class="form-control" id="cPhone<?php echo $customer['customer_id'];?>" name="cPhone" value="<?php echo $customer['customer_phone'];?>">
   </div>
     <input type="hidden" name="cid" value="<?php echo $customer['customer_id'];?>">
     <input type="hidden" name="actionType" value="Edit">
