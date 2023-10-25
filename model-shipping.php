@@ -28,8 +28,8 @@ function insertShipping($sDate, $sProduct, $sOrder) {
 function updateShipping($sDate, $sProduct, $sid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `shipping` set `shipping_date`= ?, `shipping_product`= ? where shipping_id = ?");
-        $stmt->bind_param("ssi", $sDate, $sProduct, $sid);
+        $stmt = $conn->prepare("update `shipping` set `shipping_date`= ?, `shipping_product`= ?, `order_id`= ? where shipping_id = ?");
+        $stmt->bind_param("ssii", $sDate, $sProduct, $sOrder $sid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
