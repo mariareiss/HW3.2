@@ -12,11 +12,11 @@ function selectShipping() {
         throw $e;
     }
 }
-function insertShipping($sDate, $sProduct) {
+function insertShipping($sDate, $sProduct, $sOrder) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `Shipping` (`shipping_date`, `shipping_product`, `order_id`) VALUES (?, ?,?)");
-        $stmt->bind_param("ss", $sDate, $sProduct);
+        $stmt->bind_param("sss", $sDate, $sProduct, $sOrder);
         $success = $stmt->execute();
         $conn->close();
         return $success;
