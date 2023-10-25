@@ -16,6 +16,8 @@ include "view-shipping-newform.php";
       <th>Product</th>
       <th>Date</th> 
       <th></th>
+      <th></th>
+      <th></th>
       </tr>
     </thead>
     <tbody>
