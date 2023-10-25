@@ -19,6 +19,7 @@ include "view-customer-newform.php";
       <th></th>
       <th></th>
       <th></th>
+      <th></th>
       </tr>
     </thead>
     <tbody>
@@ -49,7 +50,7 @@ while ($customer = $customers->fetch_assoc()){
     <td>
       <form method="post" action="order-by-products.php">
         <input type="hidden" name="cid" value="<?php echo $customer['customer_id'];?>">
-        <button type="submit" class="btn btn-primary">Orders</button>
+        
 </form>
     </td>
   </tr>
