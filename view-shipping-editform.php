@@ -24,7 +24,7 @@
     <label for="sProduct<?php echo $shippings['shipping_id'];?>" class="form-label">Shipping Product</label>
     <input type="text" class="form-control" id="sProduct<?php echo $shippings['shipping_id'];?>" name="sProduct" value="<?php echo $shippings['shipping_product'];?>">
   </div>
-    <input type="hidden" name="sid" value="<?php echo $shippings['shipping_id'];?>">
+    <input type="hidden" name="mid" value="<?php echo $shippings['shipping_id'];?>">
     <input type="hidden" name="actionType" value="Edit">
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
