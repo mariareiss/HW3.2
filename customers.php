@@ -29,7 +29,7 @@ if (isset($_POST['actionType'])) {
     break;
   }
 }
-$customers = selectCustomer();
+$customers = selectCustomers();
 include "view-customers.php";
 include "view-footer.php";
 ?>
