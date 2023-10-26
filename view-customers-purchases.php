@@ -14,7 +14,7 @@ while ($customer = $customers->fetch_assoc()){
  ?>
          <li class="list-group-item"><?php echo $product['product_name'];?> - <?php echo $product['product_price'];?> - <?php echo $product['order_date'];?> - <?php echo $product['store_name'];?></li>        
  <?php
-      <td>
+    
       <form method="post" action="">
         <input type="hidden" name="cid" value="<?php echo $customer['customer_id'];?>">
         <input type="hidden" name="actionType" value="Delete">
@@ -24,7 +24,6 @@ while ($customer = $customers->fetch_assoc()){
         </button>
 
       </form> 
-   </td>
     <td>
 <?php
   include "view-customer-purchase-editform.php";
